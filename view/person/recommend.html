@@ -55,7 +55,6 @@
         </select>
     </div>
 
-
     <div class="container jm_container mt-5">
         <div class="row row-cols-3 g-4 d-flex flex-wrap">
             <c:forEach items="${postList}" var="post">
@@ -79,6 +78,7 @@
                                             </c:otherwise>
                                         </c:choose>
                                     </div>
+
                                     <!--<%--  구독? 스크랩 버튼  --%>-->
                                     <button type="button" class="btn btn-sm"
                                         onclick="scrapOrCancle(event, ${post.postId})">
@@ -95,18 +95,13 @@
                                             </c:otherwise>
                                         </c:choose>
                                     </button>
-
-                                    <script>
-                                    </script>
                                 </div>
                             </div>
                         </div>
-
                     </a>
                 </div>
             </c:forEach>
         </div>
-
     </div>
   </body>
 </html>
