@@ -20,17 +20,18 @@
   </head>
   <body>
     <div class="container d-flex">
+        <!-- list-group start -->
         <div class="list-group mx-2">
-            <a href="/company/info" class="list-group-item shadow " style="width: 150px;">회사 정보</a>
-            <a href="/company/posts" class="list-group-item shadow" >공고 관리</a>
-            <a href="/company/getResume" class="list-group-item hs_list_effect shadow">받은 이력서</a>
-            <a href="/company/scrap" class="list-group-item shadow">스크랩한 유저</a>
+            <a href="#" class="list-group-item shadow " style="width: 150px;">회사 정보</a>
+            <a href="#" class="list-group-item shadow" >공고 관리</a>
+            <a href="#" class="list-group-item hs_list_effect shadow">받은 이력서</a>
+            <a href="#" class="list-group-item shadow">스크랩한 유저</a>
         </div>
-
+ <!-- list-group end -->
         <div class=" mx-2 pb-4 w-100">
             <div class="border border-tertiary  p-5 rounded shadow">
                 <div class="d-flex justify-content-between">
-                    <h1>${companyPS.name}에 도착한 이력서를 검토해보세요💌</h1>
+                    <h1>00에 도착한 이력서를 검토해보세요</h1>
                 </div>
                 <hr>
 
@@ -42,26 +43,27 @@
                             <th class="col-5">이력서</th>
                             <th class="col-3">지원날짜</th>
                         </tr>
-                        <c:forEach items="${companyProposalList}" var="proposal">
-                        
-                            <c:choose>
-                                <c:when test="${proposal.status==0}">
-                                    <tr>
-                                </c:when>
-                                <c:when test="${proposal.status==1}">
-                                    <tr class="table-info">
-                                </c:when>
-                                <c:otherwise>
-                                    <tr class="table-secondary">
-                                </c:otherwise>
-                            </c:choose>
-                        
-                            <td> &nbsp &nbsp ${proposal.ptitle}</td>
-                            <td>${proposal.name}</td>
-                            <td><a href="/company/resumeDetail/${proposal.resumeId}" class="text-decoration-none">${proposal.rtitle}</a></td>
-                            <td>${proposal.createdAt}</td>
+                    <!-- 지원 이력서 없을 때 -->
+                        <tr> <td>title</td>
+                            <td>name</td>
+                            <td><a href="#" class="text-decoration-none">title</a></td>
+                            <td>2024-03-05</td>
                         </tr>
-                        </c:forEach>
+                              
+                     <!-- 지원 이력서 하나일 때  -->
+                        <tr class="table-info">
+                            <td>title</td>
+                            <td>name</td>
+                            <td><a href="#" class="text-decoration-none">title</a></td>
+                            <td>2024-03-05</td>
+                        </tr>
+                    <!-- 그 외 -->
+                        <tr class="table-secondary">
+                            <td>title</td>
+                            <td>name</td>
+                            <td><a href="#" class="text-decoration-none">title</a></td>
+                            <td>2024-03-05</td>
+                        </tr>
                     </table>
                 </div>
             </div>

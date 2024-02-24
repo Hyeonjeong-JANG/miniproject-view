@@ -21,16 +21,16 @@
   <body>
     <div class="container d-flex">
         <div class="list-group mx-2">
-            <a href="/company/info" class="list-group-item shadow" style="width: 150px;">회사 정보</a>
-            <a href="/company/posts" class="list-group-item shadow">공고 관리</a>
-            <a href="/company/getResume" class="list-group-item shadow">받은 이력서</a>
-            <a href="/company/scrap" class="list-group-item hs_list_effect shadow">스크랩한 유저</a>
+            <a href="#" class="list-group-item shadow" style="width: 150px;">회사 정보</a>
+            <a href="#" class="list-group-item shadow">공고 관리</a>
+            <a href="#" class="list-group-item shadow">받은 이력서</a>
+            <a href="#" class="list-group-item hs_list_effect shadow">스크랩한 유저</a>
         </div>
 
         <div class=" mx-2 pb-4 w-100">
             <div class="border border-tertiary p-5 rounded shadow">
                 <div>
-                    <h1>스크랩한 지원자를 확인해보세요🎯</h1>
+                    <h1>스크랩한 지원자를 확인해보세요</h1>
                 </div>
                 <hr>
 
@@ -45,31 +45,32 @@
                     </div>
                     </table>
 
-                    <c:forEach items="${scrapList}" var="scrap">
-                        <a href="/company/resumeDetail/${scrap.resumeId}" style="text-decoration: none;">
-                            <div class="card rounded-0" id="card-${scrap.resumeId}">
-
-                                <div class="d-flex justify-content-center px-5">
-                                    <div class="card-body d-flex justify-content-between align-items-center"
-                                        style="width:800px;">
-                                        <div>${scrap.name}</div>
-                                        <div>${scrap.title}</div>
-                                        <div>
-                                            <c:forEach items="${scrap.skills}" var="skill">
-                                                <span class="badge text-bg-warning">${skill}</span>
-                                            </c:forEach>
-                                        </div>
-                                        <div>
-                                            <button type="button" class="btn btn-sm"
-                                                onclick="cancle(event, ${scrap.resumeId})">
-                                                <i class="fa-solid  scrap_icon fa-thumbs-up fa-2x"></i>
-                                            </button>
-                                        </div>
-                                    </div>
+                    <!-- 반복문: 스크랩한 지원자 시작 -->
+                    <div class="card rounded-0" id="">
+                        <div class="d-flex justify-content-center px-5">
+                            <div class="card-body d-flex justify-content-between align-items-center"
+                                style="width:800px;">
+                                <div>최주호</div>
+                                <a href="#" style="text-decoration: none;">
+                                    <div>저를 뽑아주세요.</div>
+                                </a>
+                                <div>
+                                <!-- 반복문: 스킬 시작 -->
+                                    <span class="badge text-bg-warning">JAVA</span>
+                                    <span class="badge text-bg-warning">Flutter</span>
+                                <!-- 반복문: 스킬 끝 -->
+                                </div>
+                                <!-- 이거 스크랩 취소하는 버튼을 따봉으로 하는 것은 직관성이 떨어지는 x 표시로 하는 것이 어떨까요? -->
+                                <div>
+                                    <button type="button" class="btn btn-sm">
+                                        <!-- <i class="fa-solid  scrap_icon fa-thumbs-up fa-2x"></i> -->
+                                        <i class="fas scrap_icon fa-times fa-2x"></i>
+                                    </button>
                                 </div>
                             </div>
-                        </a>
-                    </c:forEach>
+                        </div>
+                    </div>
+                 <!-- 반복문: 스크랩한 지원자 끝 -->
                 </div>
             </div>
         </div>

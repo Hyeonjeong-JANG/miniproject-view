@@ -21,146 +21,146 @@
   <body>
     <div class="container d-flex">
         <div class="list-group mx-2">
-            <a href="/company/info" class="list-group-item shadow" style="width: 150px;">회사 정보</a>
-            <a href="/company/posts" class="list-group-item shadow">공고 관리</a>
-            <a href="/company/getResume" class="list-group-item hs_list_effect shadow">받은 이력서</a>
-            <a href="/company/scrap" class="list-group-item shadow">스크랩한 유저</a>
+            <a href="#" class="list-group-item shadow" style="width: 150px;">회사 정보</a>
+            <a href="#" class="list-group-item shadow">공고 관리</a>
+            <a href="#" class="list-group-item hs_list_effect shadow">받은 이력서</a>
+            <a href="#" class="list-group-item shadow">스크랩한 유저</a>
         </div>
 
+         <!-- 개인 이력서에서 값을 끌어와야 함. -->
         <div class=" mx-2 pb-4 w-100">
             <div class="border border-tertiary p-5 rounded shadow">
-                <h1>${resumeDetail.title}</h1>
+                <h1>title</h1>
                 <hr>
                 <div class="d-flex justify-content-center">
                     <div style="width: 85%;">
                         <div class="jh_resume_flexbox mt-3">
-                            <img src="${resumeDetail.profile == null ? '/images/profile1.jpg' : resumeDetail.profile}"
+                            <img src="/images/주호초이.png" alt="이력서 사진"
                                 style="width: 188px; height: 226px;">
                             <table class="jh_resume_table">
                                 <tr>
                                     <td>이름</td>
-                                    <td>${personDetail.name}</td>
+                                    <td>최주호</td>
                                 </tr>
                                 <tr>
                                     <td>생년월일</td>
-                                    <td>${personDetail.birthday}</td>
+                                    <td>1986-02-01</td>
                                 </tr>
                                 <tr>
                                     <td>연락처</td>
-                                    <td>${personDetail.phone}</td>
+                                    <td>010-1234-5678</td>
                                 </tr>
                                 <tr>
                                     <td>주소</td>
-                                    <td>${personDetail.address}</td>
+                                    <td>부산시 부산진구 모처</td>
                                 </tr>
                                 <tr>
                                     <td>이메일</td>
-                                    <td>${personUser.email}</td>
+                                    <td><a href="mailto:ssar@nate.com" style=" color: black; font-weight: bold;">ssar@nate.com</a></td>
                                 </tr>
                             </table>
                         </div>
                         <div class="mt-5">
                             <h4>포트폴리오 주소</h4>
-                            <input type="url" class="form-control mt-2" id="floatingInput"
-                                placeholder="git 또는 blog 주소를 입력해주세요" style="display: block;"
-                                value="${resumeDetail.portfolio}" readOnly>
+                           <!-- 이걸 인풋으로 할 필요가 있을까? a태그로 변경 고려 -->
+                            <!-- <input type="url" class="form-control mt-2" id="floatingInput"
+                            style="display: block;"
+                                value="https://github.com/codingspecialist" readOnly> -->
+                                <a href="https://github.com/codingspecialist" style=" color: black; font-weight: bold;">https://github.com/codingspecialist</a>
                         </div>
                         <div class="mt-5 jh_resume_skill">
                             <h4>기술스택</h4>
                             <div>
                                 <ul>
-                                    <c:forEach items="${skillDetail}" var="skill">
-                                        <li>${skill}</li>
-                                    </c:forEach>
+                                <!-- 반복문 -->
+                                    <li>JAVA</li>
+                                    <li>Flutter</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="mt-5">
                             <h4>자기소개</h4>
-                            <textarea name="resume_content" class="w-100 opacity-50" rows="10" readOnly>${resumeDetail.selfIntro}
+                            <textarea name="resume_content" class="w-100 opacity-50" rows="10" readOnly>From now on, Let me introduce my self~
                            </textarea>
                         </div>
                         <div class="d-flex mt-4 justify-content-center">
-                            <c:choose>
-                                <c:when test="${proposal!=null}">
-                                    <table>
-                                        <c:forEach items="${proposal}" var="pro">
-                                            <tr>
-                                                <td><b>[ ${pro.title} ]</b> 에 지원한 이력서</td>
-                                                <c:choose>
-                                                    <c:when test="${pro.status==0}">
-                                                        <td>
-                                                            <div class="px-2">
-                                                                <button type="button" class="btn btn-success"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#exampleModal">합격</button>
+                            <table>
+                                <tr>
+                                    <td><b>00컴퍼니</b>에 지원한 이력서</td>
+                                        <!-- 합격 시작 -->
+                                    <td>
+                                        <!-- 합격 버튼 시작 -->
+                                        <div class="px-2">
+                                            <button type="button" class="btn btn-success" id="btnPass" 
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">합격</button>
+                                        </div>
+                                        <!-- 합격 버튼 끝 -->
+                                        <!-- 합격 버튼 누르면 나오는 모달 시작 -->
+                                        <div class="modal fade" id="exampleModal" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <!-- h5의 id가 있을 필요를 모르겠음:  aria-labelledby="exampleModalLabel"과 id="exampleModalLabel" 연결시켜서 웹 접근성을 향상, 그런데 아직 잘 모르겠음. -->
+                                                        <h5 class="modal-title"
+                                                            id="exampleModalLabel">합격 메시지를 보내주세요
+                                                        </h5>
+                                                        <button type="button" class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form>
+                                                            <div class="mb-3">
+                                                                <label for="message-text"
+                                                                    class="col-form-label">Message:</label>
+                                                                <textarea class="form-control "
+                                                                    id="message"></textarea>
                                                             </div>
-                                                            <div class="modal fade" id="exampleModal" tabindex="-1"
-                                                                aria-labelledby="exampleModalLabel"
-                                                                aria-hidden="true">
-                                                                <div class="modal-dialog">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                            <h5 class="modal-title"
-                                                                                id="exampleModalLabel">합격 메시지를 보내주세요
-                                                                            </h5>
-                                                                            <button type="button" class="btn-close"
-                                                                                data-bs-dismiss="modal"
-                                                                                aria-label="Close"></button>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <form>
-                                                                                <div class="mb-3">
-                                                                                    <label for="message-text"
-                                                                                        class="col-form-label">Message:</label>
-                                                                                    <textarea class="form-control "
-                                                                                        id="message"></textarea>
-                                                                                </div>
-                                                                            </form>
-                                                                        </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="button"
-                                                                                class="btn btn-dark"
-                                                                                data-bs-dismiss="modal">취소하기</button>
-                                                                            <button type="button"
-                                                                                class="btn init_color"
-                                                                                onclick="insertProposalPass(${pro.id})">메시지
-                                                                                보내기</button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="px-2">
-                                                                <button type="button" class="btn btn-danger"
-                                                                    onclick="updateById(${pro.id},this)">불합격</button>
-                                                            </div>
-                                                        </td>
-                                                    </c:when>
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button"
+                                                            class="btn btn-dark"
+                                                            data-bs-dismiss="modal">취소하기</button>
+                                                        <button type="button"
+                                                            class="btn init_color"
+                                                            >메시지
+                                                            보내기</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 합격 버튼 누르면 나오는 모달 끝 -->
+                                    </td>
+                                    <!-- 합격 끝 -->
+                                    <!-- 불합격 시작 -->
+                                    <td>
+                                        <div class="px-2">
+                                            <button type="button" id="btnFail" class="btn btn-danger">불합격</button>
+                                        </div>
+                                    </td>
+                                    <!-- 불합격 끝 -->
 
-                                                    <c:when test="${pro.status==1}">
-                                                        <td style="color: rgb(1, 1, 167);"><b> &nbsp&nbsp&nbsp 합격 처리
-                                                            </b>
-                                                        </td>
-                                                    </c:when>
-                                                    <c:otherwise>
-                                                        <td style="color: rgb(172, 1, 1);"><b> &nbsp&nbsp&nbsp 불합격
-                                                                처리</b>
-                                                        </td>
-                                                    </c:otherwise>
-                                                </c:choose>
-                                            </tr>
-                                        </c:forEach>
-                                    </table>
-                                </c:when>
+                                <!-- 합격/불합격 버튼 누르면 버튼 사라지고 아래가 선택적으로 생기게 -->
+                                    <td id="statusPass" style="color: rgb(1, 1, 167); display: none;"><b> &nbsp&nbsp&nbsp 합격 처리
+                                        </b>
+                                    </td>
+                                    <td id="statusFail"  style="color: rgb(172, 1, 1); display: none;"><b> &nbsp&nbsp&nbsp 불합격
+                                            처리</b>
+                                    </td>
+                                </tr>
+                            </table>
 
-                                <c:otherwise>
-                                    <div class="px-2">
-                                        <button type="button" class="btn btn-light">제안하기</button>
-                                    </div>
-                                </c:otherwise>
-                            </c:choose>
+                        <!-- 제안하기 버튼 잘못 들어간 듯. 있을 이유가 없어보임. -->
+                        <!-- 
+                            <div class="px-2">
+                                <button type="button" class="btn btn-light">제안하기</button>
+                            </div>
+                        -->
+                           
                         </div>
                     </div>
                 </div>

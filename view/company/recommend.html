@@ -25,27 +25,20 @@
 
     <div class="container mb-5 mt-3 " style="width: 1300px;">
         <div class="accordion" id="accordionExample">
-
-            <c:forEach items="${postInfoAndResumes}" var="postInfoAndResumes">
-
+            <!-- 반복문: 모든 게시물 중 우리 회사에 지원한 이력서 찾기 시작 -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="heading-${postInfoAndResumes.postId}">
+                    <h2 class="accordion-header" id="matching01">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse-${postInfoAndResumes.postId}" aria-expanded="true"
-                            aria-controls="collapse-${postInfoAndResumes.postId}" style="height: 80px;">
-
-                            ${postInfoAndResumes.title}
-
+                            data-bs-target="#matching02" aria-expanded="true"
+                            aria-controls="matching02" style="height: 80px;">
+                            title
                         </button>
                     </h2>
 
-                    <div id="collapse-${postInfoAndResumes.postId}" class="accordion-collapse collapse"
-                        aria-labelledby="heading-${postInfoAndResumes.postId}" data-bs-parent="#accordionExample">
+                    <div id="matching02" class="accordion-collapse collapse"
+                        aria-labelledby="matching01" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-
                             <div class="container mb-5 mt-3 w-100">
-
-                                <!--체크-->
                                 <table class="table table-hover">
                                     <tr class="table-dark">
                                         <th class="col-xs-2 px-5">이름</th>
@@ -53,46 +46,38 @@
                                         <th class="col-xs-3">기술 스택</th>
                                         <th class="col-xs-1"></th>
                                     </tr>
-                                    <c:forEach items="${postInfoAndResumes.resumes}" var="resume">
-
-                                        <tr>
-                                            <td class="px-5">${resume.name}</td>
-                                            <td> <a href="/company/resumeDetail/${resume.id}"
-                                                    style="text-decoration: none;">${resume.title}</a></td>
-                                            <td>
-                                                <c:forEach items="${resume.skills}" var="skill">
-                                                    <span class="badge text-bg-warning"
-                                                        value="${skill})">${skill}</span>
-                                                </c:forEach>
-                                            </td>
-                                            <td class="text-end px-5">
-                                                <button type="button" class="btn btn-sm"
-                                                    onclick="scrapOrCancle(${postInfoAndResumes.postId}, ${resume.id})">
-                                                    <c:choose>
-                                                        <c:when test="${resume.scrap == 0}">
-                                                            <i class="fa-regular text-secondary fa-thumbs-up fa-2x"
-                                                                id="scrap-${postInfoAndResumes.postId}-${resume.id}"
-                                                                value="${resume.scrap}"></i>
-                                                        </c:when>
-
-                                                        <c:otherwise>
-                                                            <i class="fa-solid scrap_icon fa-thumbs-up fa-2x"
-                                                                id="scrap-${postInfoAndResumes.postId}-${resume.id}"
-                                                                value="${resume.scrap}"></i>
-                                                        </c:otherwise>
-                                                    </c:choose>
-
-                                                </button>
-                                            </td>
-                                        </tr>
-
-                                    </c:forEach>
+                                <!-- 반복문: 우리 회사에 지원한 이력서 뿌리기 시작 -->
+                                    <tr>
+                                        <td class="px-5">name</td>
+                                        <td> <a href="#" style="text-decoration: none;">title</a></td>
+                                        <td>
+                                        <!-- 반복문: 기술 시작 -->
+                                            <span class="badge text-bg-warning"
+                                                value="">JAVA</span>
+                                                <span class="badge text-bg-warning"
+                                                value="">Flutter</span>    
+                                        <!-- 반복문: 기술 끝 -->
+                                        </td>
+                                        <td class="text-end px-5">
+                                            <button type="button" class="btn btn-sm">
+                                                <!-- 스크랩 0이면  -->
+                                                <i class="fa-regular text-secondary fa-thumbs-up fa-2x"
+                                                    id=""
+                                                    value=""></i>
+                                                <!-- 스크랩 0이 아니면 -->
+                                                <i class="fa-solid scrap_icon fa-thumbs-up fa-2x"
+                                                    id=""
+                                                    value=""></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                <!-- 반복문: 우리 회사에 지원한 이력서 뿌리기 끝 -->
                                 </table>
                             </div>
                         </div>
                     </div>
                 </div>
-            </c:forEach>
+                <!-- 반복문: 모든 게시물 중 우리 회사에 지원한 이력서 찾기 끝 -->
         </div>
     </div>
   </body>

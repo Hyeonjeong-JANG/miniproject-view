@@ -21,17 +21,17 @@
   <body>
     <div class="container d-flex">
         <div class="list-group mx-2 ">
-            <a href="/company/info" class="list-group-item shadow" style="width: 150px;">회사 정보</a>
-            <a href="/company/posts" class="list-group-item hs_list_effect shadow">공고 관리</a>
-            <a href="/company/getResume" class="list-group-item shadow">받은 이력서</a>
-            <a href="/company/scrap" class="list-group-item shadow">스크랩한 유저</a>
+            <a href="#" class="list-group-item shadow" style="width: 150px;">회사 정보</a>
+            <a href="#" class="list-group-item hs_list_effect shadow">공고 관리</a>
+            <a href="#" class="list-group-item shadow">받은 이력서</a>
+            <a href="#" class="list-group-item shadow">스크랩한 유저</a>
         </div>
 
         <div class="justify-content-center mx-2 pb-4 w-100">
             <div class="border border-tertiary p-5 rounded shadow">
                 <h1 class="d-inline-flex">공고 등록하기</h1>
                 <hr>
-                <form action="/company/savePost" method="post" onsubmit="return Check()">
+                <form action="#" method="post">
                     <div class="px-5 mt-5">
                         <h5><b>공고명</b></h5>
                         <input class="form-control" type="text" name="title" required>
@@ -81,7 +81,6 @@
                                             <input class="form-control" type="time" style="width: 38%;"
                                                 name="endHour" id="endHour" value="18:00" required>
                                         </td>
-
                                     </tr>
                                 </table>
                             </div>
@@ -102,7 +101,7 @@
                             <div class="mt-4">
                                 <h5><b>업무 소개</b></h5>
                                 <div class="border border-tertiary p-3 d-inline-flex me-3 mb-3 w-100">
-                                    <input class="form-control border-0" type="text" name="jobIntro" required>
+                                    <input class="form-control border-0" type="text" name="tasks" required>
                                 </div>
                             </div>
 
@@ -110,11 +109,15 @@
                                 <h5><b>기술/자격 조건</b></h5>
                                 <div class="p-3 d-inline-flex mb-3 w-100">
                                     <div class="row row-cols-auto gap-3 justify-content-center my-3">
-                                        <c:forEach items="${skills}" var="skill">
-                                            <input type="checkbox" name="skills" class="btn-check" id="${skill}"
-                                                value="${skill}" autocomplete="off">
-                                            <label class="btn btn-outline-primary" for="${skill}">${skill}</label>
-                                        </c:forEach>
+                                        <!-- 반복문 돌리기 -->
+                                        <!-- 스킬1 -->
+                                            <input type="checkbox" name="skills" class="btn-check" id="java"
+                                                value="java" autocomplete="off">
+                                            <label class="btn btn-outline-primary" for="java">java</label>
+                                        <!-- 스킬2 -->
+                                        <input type="checkbox" name="skills" class="btn-check" id="flutter"
+                                                value="flutter" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="flutter">flutter</label>
                                     </div>
                                 </div>
                             </div>
@@ -124,21 +127,21 @@
                                     <table class="table table-borderless pt-5 ms-5">
                                         <tr class="pb-5">
                                             <th>사원수</th>
-                                            <td>${company.size}</td>
+                                            <td>25명</td>
                                             <th>대표자</th>
-                                            <td>${company.bossName}</td>
+                                            <td>최주호</td>
                                         </tr>
                                         <tr>
                                             <th>설립년도</th>
-                                            <td>${company.cyear}</td>
+                                            <td>2020-03-05</td>
                                             <th>전화번호</th>
-                                            <td>${company.managerPhone}</td>
+                                            <td>010-1234-5678</td>
                                         </tr>
                                         <tr>
                                             <th>주소</th>
-                                            <td>${company.address}</td>
+                                            <td>부산시 해운대구 모처</td>
                                             <th>이메일</th>
-                                            <td>${principal.email}</td>
+                                            <td>ssar@nate.com</td>
                                         </tr>
                                     </table>
                                 </div>
