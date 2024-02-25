@@ -15,26 +15,206 @@
 </head>
 
 <body>
-    <section>
-        <ul>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+    </ul>
+    <!-- 이거 막 사진이 삐져나감.  -->
+    <section class="container">
+        <ul class="row row-cols-4">
+            <!-- 이력서 시작 -->
+            <li class="card col" style="width: 15rem;">
+                <a href="#" style="text-decoration: none; color: black;">
+                    <div style="width: 15rem; height: 15rem;overflow: hidden; ">
+                        <img src="/images/주호초이.png" class="card-img-top" alt="이력서 사진">
 
-            <div class="card" style="width: 18rem;">
-                <a href="#" style="text-decoration: none;">
-                    <img src="/images/주호초이.png" class="card-img-top" alt="이력서 사진">
+                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">이력서 제목</h5>
+                        <h5 class="card-title"><b>이력서 제목</b></h5>
                         <h6><span>커리어</span>|<span>2년차, 2개 회사 근무</span></h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        <p class="card-text" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;  
+                        overflow: hidden; text-overflow: ellipsis;">Some quick example text to build on the card title
+                            and make up the bulk of
                             the card's content.</p>
-
-                        <div class="d-flex justify-content-between">
-                            <button class="btn btn-outline-info btn-sm disabled">DEV</button>
-                            <button class="btn btn-outline-info btn-sm disabled">JAVA</button>
+                        <!-- 버튼 구림 -->
+                        <div class="d-flex justify-content-start" style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;  
+                        overflow: hidden; text-overflow: ellipsis;">
+                            <button class="btn btn-outline-info btn-sm disabled" style="padding: 0px 5px;">DEV</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">JAVA</button>
                             <button class="btn btn-outline-warning btn-sm disabled">Flutter</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">JavaScript</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">React</button>
                         </div>
+                    </div>
                 </a>
-                <a href="#" class="btn btn-primary">제안하기</a>
-            </div>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="btn btn-primary mb-3 " style="width:150px;">제안하기</a>
+                </div>
+            </li>
+            <!-- 이력서 끝 -->
+
+            <!-- 이력서 시작 -->
+            <li class="card col" style="width: 15rem;">
+                <a href="#" style="text-decoration: none; color: black;">
+                    <div style="width: 15rem; height: 15rem;overflow: hidden;">
+                        <img src="/images/주호초이.png" class="card-img-top" alt="이력서 사진">
+
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><b>이력서 제목</b></h5>
+                        <h6><span>커리어</span>|<span>2년차, 2개 회사 근무</span></h6>
+                        <p class="card-text" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;  
+                        overflow: hidden; text-overflow: ellipsis;">Some quick example text to build on the card title
+                            and make up the bulk of
+                            the card's content.</p>
+                        <!-- 버튼 구림 -->
+                        <div class="d-flex justify-content-start" style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;  
+                        overflow: hidden; text-overflow: ellipsis;">
+                            <button class="btn btn-outline-info btn-sm disabled" style="padding: 0px 5px;">DEV</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">JAVA</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">Flutter</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">JavaScript</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">React</button>
+                        </div>
+                    </div>
+                </a>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="btn btn-primary mb-3 " style="width:150px;">제안하기</a>
+                </div>
+            </li>
+            <!-- 이력서 끝 -->
+            <!-- 이력서 시작 -->
+            <li class="card col" style="width: 15rem;">
+                <a href="#" style="text-decoration: none; color: black;">
+                    <div style="width: 15rem; height: 15rem;overflow: hidden;">
+                        <img src="/images/주호초이.png" class="card-img-top" alt="이력서 사진">
+
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><b>이력서 제목</b></h5>
+                        <h6><span>커리어</span>|<span>2년차, 2개 회사 근무</span></h6>
+                        <p class="card-text" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;  
+                                overflow: hidden; text-overflow: ellipsis;">Some quick example text to build on the
+                            card title
+                            and make up the bulk of
+                            the card's content.</p>
+                        <!-- 버튼 구림 -->
+                        <div class="d-flex justify-content-start" style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;  
+                                overflow: hidden; text-overflow: ellipsis;">
+                            <button class="btn btn-outline-info btn-sm disabled" style="padding: 0px 5px;">DEV</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">JAVA</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">Flutter</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">JavaScript</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">React</button>
+                        </div>
+                    </div>
+                </a>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="btn btn-primary mb-3 " style="width:150px;">제안하기</a>
+                </div>
+            </li>
+            <!-- 이력서 끝 -->
+            <!-- 이력서 시작 -->
+            <li class="card col" style="width: 15rem;">
+                <a href="#" style="text-decoration: none; color: black;">
+                    <div style="width: 15rem; height: 15rem;overflow: hidden;">
+                        <img src="/images/주호초이.png" class="card-img-top" alt="이력서 사진">
+
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><b>이력서 제목</b></h5>
+                        <h6><span>커리어</span>|<span>2년차, 2개 회사 근무</span></h6>
+                        <p class="card-text" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;  
+                        overflow: hidden; text-overflow: ellipsis;">Some quick example text to build on the card title
+                            and make up the bulk of
+                            the card's content.</p>
+                        <!-- 버튼 구림 -->
+                        <div class="d-flex justify-content-start" style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;  
+                        overflow: hidden; text-overflow: ellipsis;">
+                            <button class="btn btn-outline-info btn-sm disabled" style="padding: 0px 5px;">DEV</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">JAVA</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">Flutter</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">JavaScript</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">React</button>
+                        </div>
+                    </div>
+                </a>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="btn btn-primary mb-3 " style="width:150px;">제안하기</a>
+                </div>
+            </li>
+            <!-- 이력서 끝 -->
+            <!-- 이력서 시작 -->
+            <li class="card col" style="width: 15rem;">
+                <a href="#" style="text-decoration: none; color: black;">
+                    <div style="width: 15rem; height: 15rem;overflow: hidden;">
+                        <img src="/images/주호초이.png" class="card-img-top" alt="이력서 사진">
+
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><b>이력서 제목</b></h5>
+                        <h6><span>커리어</span>|<span>2년차, 2개 회사 근무</span></h6>
+                        <p class="card-text" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;  
+                                overflow: hidden; text-overflow: ellipsis;">Some quick example text to build on the
+                            card title
+                            and make up the bulk of
+                            the card's content.</p>
+                        <!-- 버튼 구림 -->
+                        <div class="d-flex justify-content-start" style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;  
+                                overflow: hidden; text-overflow: ellipsis;">
+                            <button class="btn btn-outline-info btn-sm disabled" style="padding: 0px 5px;">DEV</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">JAVA</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">Flutter</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">JavaScript</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">React</button>
+                        </div>
+                    </div>
+                </a>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="btn btn-primary mb-3 " style="width:150px;">제안하기</a>
+                </div>
+            </li>
+            <!-- 이력서 끝 -->
+            <!-- 이력서 시작 -->
+            <li class="card col" style="width: 15rem;">
+                <a href="#" style="text-decoration: none; color: black;">
+                    <div style="width: 15rem; height: 15rem;overflow: hidden;">
+                        <img src="/images/주호초이.png" class="card-img-top" alt="이력서 사진">
+
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><b>이력서 제목</b></h5>
+                        <h6><span>커리어</span>|<span>2년차, 2개 회사 근무</span></h6>
+                        <p class="card-text" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;  
+                        overflow: hidden; text-overflow: ellipsis;">Some quick example text to build on the card title
+                            and make up the bulk of
+                            the card's content.</p>
+                        <!-- 버튼 구림 -->
+                        <div class="d-flex justify-content-start" style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;  
+                        overflow: hidden; text-overflow: ellipsis;">
+                            <button class="btn btn-outline-info btn-sm disabled" style="padding: 0px 5px;">DEV</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">JAVA</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">Flutter</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">JavaScript</button>
+                            <button class="btn btn-outline-warning btn-sm disabled">React</button>
+                        </div>
+                    </div>
+                </a>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="btn btn-primary mb-3 " style="width:150px;">제안하기</a>
+                </div>
+            </li>
+            <!-- 이력서 끝 -->
             </div>
         </ul>
     </section>
