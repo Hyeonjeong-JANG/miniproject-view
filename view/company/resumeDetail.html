@@ -50,7 +50,6 @@
             <a href="#" class="list-group-item hs_list_effect shadow">받은 이력서</a>
             <a href="#" class="list-group-item shadow">스크랩한 유저</a>
         </div>
-
         <!-- 개인 이력서에서 값을 끌어와야 함. -->
         <div class=" mx-2 pb-4 w-100">
             <div class="border border-tertiary p-5 rounded shadow">
@@ -123,7 +122,6 @@
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <!-- h5의 id가 있을 필요를 모르겠음:  aria-labelledby="exampleModalLabel"과 id="exampleModalLabel" 연결시켜서 웹 접근성을 향상, 그런데 아직 잘 모르겠음. -->
                                                         <h5 class="modal-title" id="exampleModalLabel">합격 메시지를 보내주세요
                                                         </h5>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -134,30 +132,45 @@
                                                             <div class="mb-3">
                                                                 <label for="message-text"
                                                                     class="col-form-label">Message:</label>
-                                                                <textarea class="form-control " id=""></textarea>
+                                                                <textarea class="form-control"
+                                                                    id="message-text"></textarea>
                                                             </div>
                                                         </form>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-dark"
                                                             data-bs-dismiss="modal">취소하기</button>
-                                                        <button type="button" class="btn init_color">메시지
-                                                            보내기</button>
+                                                        <button type="button" class="btn init_color"
+                                                            onclick="confirmSendMessage()">메시지 보내기</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- 합격 버튼 누르면 나오는 모달 끝 -->
+                                        <script>
+                                            function confirmSendMessage() {
+                                                if (confirm("정말로 메세지를 보내시겠습니까?")) {
+                                                    alert("메세지를 보냈습니다!");
+                                                }
+                                            }
+                                        </script>
                                     </td>
                                     <!-- 합격 끝 -->
                                     <!-- 불합격 시작 -->
                                     <td>
                                         <div class="px-2">
-                                            <button type="button" id="btnFail" class="btn btn-danger">불합격</button>
+                                            <button type="button" id="btnFail" class="btn btn-danger"
+                                                onclick="doublecheckMessage()">불합격</button>
                                         </div>
                                     </td>
+                                    <script>
+                                        function doublecheckMessage() {
+                                            if (confirm("정말로 불합격 처리를 하시겠습니까?")) {
+                                                alert("불합격 처리가 되었습니다.");
+                                            }
+                                        }
+                                    </script>
                                     <!-- 불합격 끝 -->
-
                                     <!-- 합격/불합격 버튼 누르면 버튼 사라지고 아래가 선택적으로 생기게 -->
                                     <td id="statusPass" style="color: rgb(1, 1, 167); display: none;"><b>
                                             &nbsp&nbsp&nbsp 합격 처리
@@ -170,7 +183,7 @@
                                 </tr>
                             </table>
                             <!-- 제안하기 버튼 잘못 들어간 듯. 있을 이유가 없어보임. 모를 일이지-->
-                            <!-- 
+                            <!--
                             <div class="px-2">
                                 <button type="button" class="btn btn-light">제안하기</button>
                             </div>

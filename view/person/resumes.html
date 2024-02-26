@@ -50,28 +50,58 @@
             <a href="#" class="list-group-item shadow">스크랩</a>
             <a href="#" class="list-group-item shadow">지원 이력</a>
         </div>
-
         <div class=" mx-2 pb-4 w-100">
             <div class="border border-tertiary p-5 rounded shadow">
-                <div>
+                <div class="container d-flex justify-content-between">
                     <h1>이력서 관리</h1>
+                    <button class="jh_resume_button mb-5 rounded jm_card">:두꺼운_더하기_기호: 새 이력서 등록</button>
                 </div>
                 <hr>
-
                 <div class="jh_resume mt-5">
-                    <button class="jh_resume_button mb-5 rounded jm_card">➕ 새 이력서 등록</button>
+                    <!-- 새이력서 등록 버튼 오른쪽 상단으로 위치 변경 -->
+                    <!-- <button class="jh_resume_button mb-5 rounded jm_card">:두꺼운_더하기_기호: 새 이력서 등록</button> -->
+                    <!-- 표 삽입 -->
+                    <div class="container mb-5 mt-5 w-100">
+                        <table class="table table-hover">
+                            <!-- 테이블-다크는 호버 없게 -->
+                            <tr class=" table-dark">
+                                <th class="col-4 px-2">&nbsp &nbsp 이력서명</th>
+                                <th class="col-3 text-center">기술 스택</th>
+                                <th class="col-2 text-center">업로드일자</th>
+                                <th class="col-2 text-center">메인 여부</th>
+                            </tr>
+                            <!-- 반복문: 내가 지원한 이력서 시작 -->
+                            <!-- 이력서 상태별(?) 행 색깔 시작 -->
+                            <!-- 이력서 상태 1이면 -->
+                            <tr class="table-info hs_hover">
+                                <!-- 이력서 상태 1이 아니면  -->
+                                <!-- <tr
+                                class="table-secondary hs_hover"> -->
+                                <!-- 이력서 상태별(?) 행 색깔 끝 -->
+                                <td> &nbsp &nbsp <a href="#" style="text-decoration: none;">이력서 제목</a></td>
+                                <td class="text-center">이력서에서 선택한 스택이 자동으로 동기화되는 코드 필요</td>
+                                <td class="text-center">2024-03-05</td>
+                                <td class="text-center"> <select name="">
+                                        <option value="true">메인 이력서</option>
+                                        <option value="false">서브 이력서</option>
+                                    </select></td>
+                            </tr>
+                        </table>
+                    </div>
                     <!-- 반복문: 내가 작성한 이력서들 보이기 시작 -->
                     <div id="" class="jh_resume_content mt-2 mb-2"
                         style="display: flex; justify-content: space-between">
-                        <div class="d-flex align-items-center">
+                        <!-- 필요없는 코드 -->
+                        <!-- <div class="d-flex align-items-center">
                             <a href="#">저를 뽑아주세요.</a>
-                        </div>
-                        <div>
-                            <!-- 버튼 선택 -->
-                            <button type="button" class="btn btn-success">공개중</button>
-                            <!-- <button type="button" class="btn btn-warning">비공개중</button> -->
-                            <!-- <button type="button" class="btn btn-dark" onclick="deleteResume(${resume.id})">삭제</button> -->
-                        </div>
+                        </div> -->
+                        <!-- 공개여부 필요없음 -->
+                        <!-- <div> -->
+                        <!-- 버튼 선택 -->
+                        <!-- <button type="button" class="btn btn-success">공개중</button> -->
+                        <!-- <button type="button" class="btn btn-warning">비공개중</button> -->
+                        <!-- <button type="button" class="btn btn-dark" onclick="deleteResume(${resume.id})">삭제</button> -->
+                        <!-- </div> -->
                     </div>
                     <!-- 반복문: 내가 작성한 이력서들 보이기 끝 -->
                 </div>
@@ -79,8 +109,7 @@
         </div>
     </div>
     <footer class="border-top  bg-light">
-        <div class="sj_full_container py-5 text-center bottom-0"
-            style="font-size: 12px;">
+        <div class="sj_full_container py-5 text-center bottom-0" style="font-size: 12px;">
             Copyright© KDT-1 <br /><br />
             <a class="link-dark" href="#">고객센터</a> </br>
             000-0000-0000 (평일 09:00~19:00, 주말공휴일 휴무)<br />

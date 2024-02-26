@@ -42,78 +42,63 @@
     </nav>
     <!-- 기업 로그인 했을 때 보이는 헤더 끝 -->
   </header>
-  <div class="container d-flex">
+  <div class="container d-flex" style="height: 100vh;">
     <div class="list-group mx-2">
-      <a href="#" class="list-group-item shadow" style="width: 150px">회원 정보</a>
+      <a href="#" class="list-group-item shadow" style="width: 150px;">회원 정보</a>
       <a href="#" class="list-group-item shadow">이력서 관리</a>
       <a href="#" class="list-group-item shadow">스크랩</a>
       <a href="#" class="list-group-item hs_list_effect shadow">지원 이력</a>
     </div>
-
-    <div class="mx-2 pb-4 w-100">
-      <div class="border border-tertiary p-5 rounded shadow">
+    <div class=" mx-2 pb-4 w-100">
+      <!-- 세로 길이 850px로 고정 -->
+      <div class="border border-tertiary  p-5 rounded shadow h-100">
         <div class="d-flex justify-content-between">
           <h1>지원한 이력서</h1>
         </div>
-        <hr />
-
-        <div class="container mb-5 mt-5 w-100" style="height: 100vh">
+        <hr>
+        <div class="container mb-5 mt-5 w-100">
           <table class="table table-hover">
             <!-- 테이블-다크는 호버 없게 -->
-            <tr class="table-dark">
-              <th class="col-3 px-2">&nbsp &nbsp 지원 공고</th>
-              <th class="col-2 text-center">회사명</th>
+            <tr class=" table-dark">
+              <th class="col-4 px-2">&nbsp &nbsp 지원 공고</th>
+              <th class="col-3 text-center">회사명</th>
               <th class="col-2 text-center">마감일자</th>
-              <th class="col-1 text-center">합격 여부</th>
-              <th class="col-2 text-center"></th>
+              <th class="col-2 text-center">합격 여부</th>
             </tr>
             <!-- 반복문: 내가 지원한 이력서 시작 -->
-
             <!-- 이력서 상태별(?) 행 색깔 시작 -->
             <!-- 이력서 상태 1이면 -->
             <tr class="table-info hs_hover">
               <!-- 이력서 상태 1이 아니면  -->
               <!-- <tr
-                            class="table-secondary hs_hover"> -->
+                        class="table-secondary hs_hover"> -->
               <!-- 이력서 상태별(?) 행 색깔 끝 -->
-
-              <td>
-                &nbsp &nbsp
-                <a href="#" style="text-decoration: none">인재를 뽑습니다.</a>
-              </td>
+              <td> &nbsp &nbsp <a href="#" style="text-decoration: none;">인재를 뽑습니다.</a></td>
               <td class="text-center">00컴퍼니</td>
               <td class="text-center">2024-03-05</td>
               <!-- 대기중, 합격, 불합격 중 1 -->
-              <!-- <td class="text-center">
-                  <a href="#" style="text-decoration: none">대기중</a>
-                </td> -->
-              <td class="text-center">
-                <a href="#" class="text-danger" style="text-decoration: none">불합격</a>
-              </td>
-
-              <!-- 합격 시작 -->
-              <!-- <td class="text-center">
-                  <a href="#" style="text-decoration: none">합격</a>
-                  <div class="modal fade" id="">
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type=" button" class="btn-close"></button>
-                        </div>
-                        <div class="modal-body">합격을 축하합니다.</div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-dark">
-                            닫기
-                          </button>
-                        </div>
-                      </div>
+              <!-- <td class="text-center">대기중</td> -->
+              <!-- <td class="text-center"> <h6 class="text-danger d-inline-flex">
+                            불합격 </h6></td> -->
+              <td class="text-center"><a class="link-primary">합격</a></td>
+              <!-- 합격 축하창 -->
+              <div class="modal fade" id="">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="">
+                        합격</h5>
+                      <button type=" button" class="btn-close"></button>
+                    </div>
+                    <div class="modal-body">
+                      합격을 축하합니다.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-dark">닫기</button>
                     </div>
                   </div>
-                </td> -->
-              <!-- 합격 끝 -->
-
-              <td class="text-center">
-                <a href="#" class="text-danger" style="text-decoration: none">지원 취소</a>
+                </div>
+              </div>
               </td>
             </tr>
             <!-- 반복문: 내가 지원한 이력서 끝 -->
@@ -123,15 +108,14 @@
     </div>
   </div>
   <footer class="border-top  bg-light">
-    <div class="sj_full_container py-5 text-center bottom-0"
-        style="font-size: 12px;">
-        Copyright© KDT-1 <br /><br />
-        <a class="link-dark" href="#">고객센터</a> </br>
-        000-0000-0000 (평일 09:00~19:00, 주말공휴일 휴무)<br />
-        help@xxxx.co.kr<br />
-        부산 해운대구 XX동<br />
+    <div class="sj_full_container py-5 text-center bottom-0" style="font-size: 12px;">
+      Copyright© KDT-1 <br /><br />
+      <a class="link-dark" href="#">고객센터</a> </br>
+      000-0000-0000 (평일 09:00~19:00, 주말공휴일 휴무)<br />
+      help@xxxx.co.kr<br />
+      부산 해운대구 XX동<br />
     </div>
-</footer>
+  </footer>
 </body>
 
 </html>
