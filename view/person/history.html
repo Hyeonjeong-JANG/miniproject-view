@@ -1,88 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- 부트스트랩 cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- 제이쿼리 cdn-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- 폰트어썸 cdn-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="container d-flex">
-        <div class="list-group mx-2">
-            <a href="#" class="list-group-item shadow" style="width: 150px;">회원 정보</a>
-            <a href="#" class="list-group-item shadow">이력서 관리</a>
-            <a href="#" class="list-group-item shadow">스크랩</a>
-            <a href="#" class="list-group-item hs_list_effect shadow">지원 이력</a>
-        </div>
+      <div class="list-group mx-2">
+        <a href="#" class="list-group-item shadow" style="width: 150px"
+          >회원 정보</a
+        >
+        <a href="#" class="list-group-item shadow">이력서 관리</a>
+        <a href="#" class="list-group-item shadow">스크랩</a>
+        <a href="#" class="list-group-item hs_list_effect shadow">지원 이력</a>
+      </div>
 
-        <div class=" mx-2 pb-4 w-100">
-            <div class="border border-tertiary  p-5 rounded shadow">
-                <div class="d-flex justify-content-between">
-                    <h1>지원한 이력서</h1>
-                </div>
-                <hr>
+      <div class="mx-2 pb-4 w-100">
+        <div class="border border-tertiary p-5 rounded shadow">
+          <div class="d-flex justify-content-between">
+            <h1>지원한 이력서</h1>
+          </div>
+          <hr />
 
-                <div class="container mb-5 mt-5 w-100">
-                    <table class="table table-hover">
-                        <!-- 테이블-다크는 호버 없게 -->
-                        <tr class=" table-dark">
-                            <th class="col-4 px-2">&nbsp &nbsp 지원 공고</th>
-                            <th class="col-3 text-center">회사명</th>
-                            <th class="col-2 text-center">마감일자</th>
-                            <th class="col-2 text-center">합격 여부</th>
-                        </tr>
-                        <!-- 반복문: 내가 지원한 이력서 시작 -->
+          <div class="container mb-5 mt-5 w-100" style="height: 100vh">
+            <table class="table table-hover">
+              <!-- 테이블-다크는 호버 없게 -->
+              <tr class="table-dark">
+                <th class="col-3 px-2">&nbsp &nbsp 지원 공고</th>
+                <th class="col-2 text-center">회사명</th>
+                <th class="col-2 text-center">마감일자</th>
+                <th class="col-1 text-center">합격 여부</th>
+                <th class="col-2 text-center"></th>
+              </tr>
+              <!-- 반복문: 내가 지원한 이력서 시작 -->
 
-                        <!-- 이력서 상태별(?) 행 색깔 시작 -->
-                        <!-- 이력서 상태 1이면 -->
-                        <tr class="table-info hs_hover">
-                            <!-- 이력서 상태 1이 아니면  -->
-                            <!-- <tr
+              <!-- 이력서 상태별(?) 행 색깔 시작 -->
+              <!-- 이력서 상태 1이면 -->
+              <tr class="table-info hs_hover">
+                <!-- 이력서 상태 1이 아니면  -->
+                <!-- <tr
                             class="table-secondary hs_hover"> -->
-                            <!-- 이력서 상태별(?) 행 색깔 끝 -->
+                <!-- 이력서 상태별(?) 행 색깔 끝 -->
 
-                            <td> &nbsp &nbsp <a href="#" style="text-decoration: none;">인재를 뽑습니다.</a></td>
-                            <td class="text-center">00컴퍼니</td>
-                            <td class="text-center">2024-03-05</td>
-                            <!-- 대기중, 합격, 불합격 중 1 -->
-                            <!-- <td class="text-center">대기중</td> -->
-                            <!-- <td class="text-center"> <h6 class="text-danger d-inline-flex">
-                                불합격 </h6></td> -->
-                            <td class="text-center"><a class="link-primary">합격</a></td>
-                            <!-- 합격 축하창 -->
-                            <div class="modal fade" id="">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="">
-                                                합격</h5>
-                                            <button type=" button" class="btn-close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            합격을 축하합니다.
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-dark">닫기</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </td>
-                        </tr>
-                        <!-- 반복문: 내가 지원한 이력서 끝 -->
-                    </table>
-                </div>
-            </div>
+                <td>
+                  &nbsp &nbsp
+                  <a href="#" style="text-decoration: none">인재를 뽑습니다.</a>
+                </td>
+                <td class="text-center">00컴퍼니</td>
+                <td class="text-center">2024-03-05</td>
+                <!-- 대기중, 합격, 불합격 중 1 -->
+                <!-- <td class="text-center">
+                  <a href="#" style="text-decoration: none">대기중</a>
+                </td> -->
+                <td class="text-center">
+                  <a href="#" class="text-danger" style="text-decoration: none"
+                    >불합격</a
+                  >
+                </td>
+
+                <!-- 합격 시작 -->
+                <!-- <td class="text-center">
+                  <a href="#" style="text-decoration: none">합격</a>
+                  <div class="modal fade" id="">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type=" button" class="btn-close"></button>
+                        </div>
+                        <div class="modal-body">합격을 축하합니다.</div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-dark">
+                            닫기
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td> -->
+                <!-- 합격 끝 -->
+
+                <td class="text-center">
+                  <a href="#" class="text-danger" style="text-decoration: none"
+                    >지원 취소</a
+                  >
+                </td>
+              </tr>
+              <!-- 반복문: 내가 지원한 이력서 끝 -->
+            </table>
+          </div>
         </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
