@@ -44,17 +44,11 @@
         <!-- 기업 로그인 했을 때 보이는 헤더 끝 -->
     </header>
     <div class="container d-flex">
-        <div class="list-group mx-2">
-            <a href="#" class="list-group-item shadow" style="width: 150px;">회원 정보</a>
-            <a href="#" class="list-group-item hs_list_effect shadow">이력서 관리</a>
-            <a href="#" class="list-group-item shadow">스크랩</a>
-            <a href="#" class="list-group-item shadow">지원 이력</a>
-        </div>
         <form action="#" method="post" enctype="multipart/form-data">
             <div class=" mx-2 pb-4 w-100">
                 <div class="border border-tertiary w-100 p-5 rounded shadow">
-                    <h1><input type="text" placeholder="이력서 제목을 입력하세요" style="width: 700px" class="hs_input_title"
-                            name="" value=""></h1>
+                    <h1 class="mx-5"><input type="text" placeholder="이력서 제목을 입력하세요" style="width: 700px; "
+                            class="hs_input_title mx-5" name="" value=""></h1>
                     <!-- <span>공개 여부 설정 |</span>
                     <select name="publish"> -->
                     <!-- 공개중인 경우 -->
@@ -71,8 +65,11 @@
                         <div class="d-flex row justify-content-center">
                             <div class="jh_resume_flexbox mt-3">
                                 <!-- 프로필 사진이 있으면 사진을 보여주고, 없으면 디폴트 이미지를 보여줌. -->
-                                <img src="" alt="프로필 사진" id="" style="width: 200px; height: 250px;"
-                                    class="mb-2 border border-tertiary">
+                                <div class="border" style="width: 200px; height: 250px;">
+                                    <img src="/images/person7.png" alt="프로필 사진" width="100%" id=""
+                                        class="mb-2 border border-tertiary">
+                                </div>
+
                                 <div class="jh_resume_personal_info">
                                     <div class="input-group mb-3">
                                         <span
@@ -177,6 +174,14 @@
                 </div>
             </div>
         </form>
+        <!-- list-group(왼쪽 바로가기) 시작 -->
+        <div class="list-group mx-2">
+            <a href="#" class="list-group-item shadow " style="width: 150px;">회원정보관리</a>
+            <a href="#" class="list-group-item shadow">이력서관리</a>
+            <a href="#" class="list-group-item hs_list_effect shadow">스크랩한 공고</a>
+            <a href="#" class="list-group-item shadow">받은 제안</a>
+        </div>
+        <!-- list-group(왼쪽 바로가기) 끝 -->
     </div>
     <footer class="border-top  bg-light">
         <div class="sj_full_container py-5 text-center bottom-0" style="font-size: 12px;">
