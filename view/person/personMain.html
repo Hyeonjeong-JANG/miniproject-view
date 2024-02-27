@@ -43,17 +43,33 @@
     <!-- 기업 로그인 했을 때 보이는 헤더 끝 -->
   </header>
 
+  <div class="container grid-gap: 50px;">
+    <!-- 유형별 공고 탭 시작 -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="#">구인공고</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">채용공고</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">맞춤공고</a>
+      </li>
+    </ul>
+    <!-- 유형별 공고 탭 끝 -->
+  </div>
   <!-- 검색 -->
-  <div class="container align-items-center mt-3">
-    <div class="search-top">
+  <div class="container align-items-center mt-3 border p-3" style="border-radius: 10px;">
+    <h5 class="pb-2">맞춤 검색</h5>
+    <!-- <div class="search-top">
       <form class=" company search d-flex " role="search">
         <input class="form-control me-2" type="search" placeholder="회사/채용공고로 검색" aria-label="Search" />
         <button class="btn btn-outline-success" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
-    </div>
-    <div class="search-mid">
+    </div> -->
+    <div class="search-top">
       <div class="d-flex justify-content-between">
         <div style="width: 100%;">
           <select class="form-select" aria-label="Default select example">
@@ -108,24 +124,7 @@
         <label class="btn btn-outline-primary" for="btn10">Flutter</label>
       </div>
     </div>
-
   </div>
-  <div class="container grid-gap: 50px;">
-    <!-- 유형별 공고 탭 시작 -->
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="#">구인공고</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="#">채용공고</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">맞춤공고</a>
-      </li>
-    </ul>
-    <!-- 유형별 공고 탭 끝 -->
-  </div>
-
   <section class="container grid-gap: 50px; mt-5">
     <ul class="row row-cols-4 gap-3">
       <!-- 구인공고 시작 -->
