@@ -45,10 +45,13 @@
     </header>
     <div class="container d-flex">
         <form action="#" method="post" enctype="multipart/form-data">
+
             <div class=" mx-2 pb-4 w-100">
+
                 <div class="border border-tertiary w-100 p-5 rounded shadow">
-                    <h1 class="mx-5"><input type="text" placeholder="이력서 제목을 입력하세요" style="width: 700px; "
-                            class="hs_input_title mx-5" name="" value=""></h1>
+                    <h4 style="margin-left: 95px;">*이력서를 작성해 주세요.</h4>
+                    <h1 class="mx-5 "><input type="text" placeholder="이력서 제목을 입력하세요" style="width: 700px; border: none;"
+                            class="hs_input_title mx-5" name="" value="" autofocus></h1>
                     <!-- <span>공개 여부 설정 |</span>
                     <select name="publish"> -->
                     <!-- 공개중인 경우 -->
@@ -65,38 +68,37 @@
                         <div class="d-flex row justify-content-center">
                             <div class="jh_resume_flexbox mt-3">
                                 <!-- 프로필 사진이 있으면 사진을 보여주고, 없으면 디폴트 이미지를 보여줌. -->
-                                <div class="border" style="width: 200px; height: 250px;">
-                                    <img src="/images/person07.png" alt="프로필 사진" width="100%" id=""
-                                        class="mb-2 border border-tertiary">
+                                <div class="border mb-3" style="width: 200px; height: 250px;">
+                                    <img src="" alt="프로필 사진" width="100%" id="" class="mb-2 border border-tertiary">
                                 </div>
 
                                 <div class="jh_resume_personal_info">
                                     <div class="input-group mb-3">
                                         <span
                                             class="input-group-text justify-content-center w-25 init_color hs_span">이름</span>
-                                        <input type="text" class="form-control" style="width: 120px;" value="최주호"
-                                            name="">
+                                        <input type="text" class="form-control" style="width: 120px;" value="" name=""
+                                            required>
                                     </div>
                                     <div class="input-group mb-3">
                                         <span
                                             class="input-group-text justify-content-center w-25 init_color hs_span">생년월일</span>
-                                        <input type="date" class="form-control" style="width: 120px;" value="1986-02-01"
-                                            name="">
+                                        <input type="date" class="form-control" style="width: 120px;" value="" name=""
+                                            required>
                                     </div>
                                     <div class="input-group mb-3">
                                         <span
                                             class="input-group-text justify-content-center w-25 init_color hs_span">연락처</span>
-                                        <input type="tel" class="form-control" value="010-1234-5678" name="">
+                                        <input type="tel" class="form-control" value="" name="" required>
                                     </div>
                                     <div class="input-group mb-3">
                                         <span
                                             class="input-group-text justify-content-center w-25 init_color hs_span">주소</span>
-                                        <input type="text" class="form-control" value="부산시 부산진구 모처" name="">
+                                        <input type="text" class="form-control" value="" name="" required>
                                     </div>
                                     <div class="input-group mb-3">
                                         <span
                                             class="input-group-text justify-content-center w-25 init_color hs_span">이메일</span>
-                                        <input type="email" class="form-control" value="ssar@nate.com" readonly>
+                                        <input type="email" class="form-control" value="" required>
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +111,7 @@
                                 <div class="mt-5">
                                     <h4>포트폴리오 주소</h4>
                                     <input type="text" class="form-control mt-2" id="" name="" style="display: block;"
-                                        value="원래 써져있던 깃헙주소" required>
+                                        value="">
                                 </div>
                             </div>
                             <div class="my-5">
@@ -162,12 +164,10 @@
                             <div>
                                 <h4>자기소개</h4>
                                 <textarea name="selfIntro" class="w-100 opacity-50" rows="10"
-                                    placeholder="내용을 입력하세요">나는 누구입니다.</textarea>
+                                    placeholder="100자 이상 작성해 주세요." minlength="100"></textarea>
                             </div>
-                            <div class="d-flex mt-4 justify-content-center">
-                                <div class="px-2">
-                                    <button type="submit" class="btn btn-dark">저장</button>
-                                </div>
+                            <div class="d-flex justify-content-center">
+                                <a href="#" class="btn btn-outline-success mb-3 mt-3" style="width: 100%">저장하기</a>
                             </div>
                         </div>
                     </div>
@@ -180,6 +180,7 @@
             <a href="#" class="list-group-item shadow">이력서관리</a>
             <a href="#" class="list-group-item hs_list_effect shadow">스크랩한 공고</a>
             <a href="#" class="list-group-item shadow">받은 제안</a>
+            <a href="#" class="list-group-item shadow">지원 현황</a>
         </div>
         <!-- list-group( 오른쪽 바로가기) 끝 -->
     </div>
